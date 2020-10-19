@@ -66,6 +66,15 @@ int solve(){
     ll n,k=0;
     ll ans=0;
 
+    vi l=vi(n);
+    rep(i,n){
+        if (s[i]=='R'){
+            a[i]=1;
+        }else{
+            a[i]=-1;
+        }
+    }
+
     cin>>n;
     vi a=vi(n,0);
     rep(i,n)cin>>a[i];
