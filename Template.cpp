@@ -78,7 +78,33 @@ int solve(){
     cin>>n;
     vi a=vi(n,0);
     rep(i,n)cin>>a[i];
+        ll n,a,b;
     
+//Graph--------------------------------------
+    cin>>n;
+    vector<vector<pii>> v(n,vector<pii>(0));
+    
+    rep(i,n-1){
+        cin>>a>>b;
+        a--;b--;
+        //v[a].emplace_back(b,1);
+        v[a].pb(pii(b,1));
+        v[b].emplace_back(a,1);
+    }
+    
+    rep(i,n){
+        cout<<i<<endl;
+        rep(j,size(v[i])){
+            a=v[i][j].first;
+            int d=v[i][j].second;
+            cout<<a<<','<<d;
+            cout<<endl;
+        }
+    }
+//Graph--------------------------------------
+
+  
+  return 0;
     cout<<ans<<endl;
     return 0;
 }
