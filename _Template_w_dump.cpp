@@ -103,7 +103,7 @@ namespace dm {
         DUMPOUT << "  " << #x << "[" << #n << "]"                            \
                 << ":=> {";                                                  \
         for(dm::i=0; dm::i<n; ++dm::i)                                       \
-            DUMPOUT << x[dm::i] << (((dum::i) == (n - 1)) ? "}" : ", ");     \
+            DUMPOUT << x[dm::i] << (((dm::i) == (n - 1)) ? "}" : ", ");     \
         DUMPOUT << " in [" << __LINE__ << "]" << endl;                       \
     }
 
